@@ -8,14 +8,14 @@ def test_add_feedback():
         "feedbacks": [
             {
                 "type": "product",
-                "score": 5,
-                "description": "Great product!",
+                "score": 2,
+                "description": "Me encantó el producto",
                 "date": "2024-08-26T14:00:00"
             },
             {
                 "type": "service",
-                "score": 4,
-                "description": "Good service.",
+                "score": 1,
+                "description": "Odio el producto",
                 "date": "2024-08-26T14:05:00"
             }
         ]
