@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Query
 from datetime import datetime
 from typing import Optional
-from app.schemas.feedback import FeedbackListSchema
+from app.schemas.feedback import FeedbackListSchema, FeedbackSchema
 from app.crud.feedback import (
     create_many_feedback,
     get_feedback_by_type_and_date,
@@ -48,3 +48,7 @@ async def analyze_by_score_and_date(
     insights = await analyze_feedback_bulk(feedbacks)
     return {"insights": insights}
 
+@router.post("/feedback/analyze/")
+async def analyze_feedback(feedback: FeedbackSchema):
+    insights = await analyze_feedback_bulk([feedback.model_dump()])
+    return {"insights": insights[0]}
