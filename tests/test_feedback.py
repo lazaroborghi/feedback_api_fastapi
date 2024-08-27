@@ -9,13 +9,13 @@ def test_add_feedback():
                 "type": "product",
                 "score": 1,
                 "description": "HORRIBLE",
-                "date": "2024-08-26T14:00:00"
+                "date": "2024-08-28T14:00:00"
             },
             {
                 "type": "service",
                 "score": 1,
                 "description": "Odio el producto",
-                "date": "2024-08-26T14:05:00"
+                "date": "2024-08-28T14:05:00"
             }
     ]
     response = client.post("/feedback/", json=feedback)
