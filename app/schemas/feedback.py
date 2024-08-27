@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional
 from datetime import datetime
 
 class FeedbackSchema(BaseModel):
@@ -7,6 +7,3 @@ class FeedbackSchema(BaseModel):
     score: Optional[int]
     description: str
     date: datetime
-
-class FeedbackListSchema(BaseModel):
-    feedbacks: List[FeedbackSchema]
